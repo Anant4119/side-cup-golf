@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+}
+
+
+.nav {
+    display: flex;
+    height: 140px;
+    width: 100%;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #92d69b;
+    z-index: 99;
+    position: fixed;
+
+
+}
+
+.cursor-blr {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #96c11e52;
+    z-index: 9;
+    position: fixed;
+    filter: blur(50px);
+}
+
+.nav img {
+    width: 85px;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+}
+
+video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.304);
+}
+
+.page1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.page1 h1 {
+    font-size: 130px;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+
+}
+
+
+.page1 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.page1 p {
+    font-size: 20px;
+    font-weight: 100;
+    width: 50%;
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+.scroller {
+    color: white;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    z-index: 10;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller h4 {
+    font-size: 120px;
+    font-size: 900;
+    -webkit-text-stroke: 2px #95C11E;
+    color: transparent;
+    transition: all linear 0.4s;
+
+}
+
+.scroller h4:hover {
+    color: #95C11E;
+}
+
+#scroller-in {
+    display: flex;
+    gap: 10px;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+.about {
+    margin-top: 10px;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+}
+
+.about img {
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 50%;
+    text-align: center;
+
+}
+
+#about-text h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+#about-text p {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+    width: 100%;
+
+}
+
+.card {
+    height: 78%;
+    width: 20%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#card-1 {
+    background-image: url("https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card1.avif");
+}
+
+#card-2 {
+    background-image: url("https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card2.webp");
+}
+
+
+#card-3 {
+    background-image: url("https://sidcup-family-golf-rishabh07r.netlify.app/Assests/card3.avif");
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #95C11E;
+    color: black;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+
+}
+
+.overlay h3 {
+    font-size: 40px;
+    white-space: wrap;
+    text-align: center;
+}
+
+
+.overlay p {
+    margin-top: 5px;
+    font-size: 15px;
+    white-space: wrap;
+    text-align: center;
+}
+
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover .overlay {
+    transform: rotate3d(-1, 1, 0, 10deg);
+}
+
+.green {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+    justify-content: space-between;
+
+}
+
+.green img {
+    height: 100%;
+    object-fit: cover;
+    width: 15%;
+}
+
+#text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+
+
+#text h4 {
+    font-size: 30px;
+    font-weight: 800;
+    width: 45%;
+}
+
+.page3 {
+    width: 100%;
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.page3 p {
+    width: 50%;
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.page3 img {
+    position: absolute;
+    width: 60px;
+}
+
+.page3 #colon-left {
+    left: 18%;
+    top: 20%;
+}
+
+.page3 #colon-right {
+    bottom: 20%;
+    right: 20%;
+}
+
+.page4 {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.elem {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h2 {
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    display: flex;
+    color: black;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem:hover h2 {
+    color: white;
+    background-color: transparent;
+}
+
+.page4 h1 {
+    font-size: 80px;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    color: blac;
+    position: absolute;
+    top: -2%;
+    font-family: gilroy;
+    -webkit-text-stroke: 2px white;
+}
+
+.footer {
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.footer-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fimg-1 {
+    height: 100%;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#fimg-2 {
+    width: 140px;
+    position: absolute;
+    left: 8%;
+    top: 80px;
+    bottom: 50px;
+}
